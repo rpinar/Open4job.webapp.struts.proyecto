@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<form-beans> <form-bean name="aparcamientoForm" type="open4job.web.common.form.AparcamientoForm"/> 
+		</form-beans> 
+
+	<action-mappings>
+		<!-- En path hay que poner la dirección que queremos que salga en el navegador, 
+			en type el lugar donde tenemos el action -->
+			<action path="/saludo" type="open4job.web.common.action.AparcamientoAction" name="aparcamientoForm">
+
+			<!-- Aquí en el forward es donde añadimos los alias, y sus diecciones -->
+			<forward name="success" path="/ListadoAparcamientos.jsp" />
+
+		</action>
+		
+		
+	</action-mappings>
+
+</struts-config>
